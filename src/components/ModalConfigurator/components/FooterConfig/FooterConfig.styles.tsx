@@ -5,6 +5,7 @@ export const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${theme.section.gap};
+  min-width: 500px;
 `;
 
 export const CheckboxGroup = styled.div`
