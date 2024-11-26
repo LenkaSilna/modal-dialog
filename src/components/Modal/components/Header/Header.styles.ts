@@ -17,5 +17,5 @@ export const Title = styled.h2`
   margin: 0;
   flex: 1;
   color: ${theme.colors.text};
-  font-size: 18px;
+  font-size: ${theme.typography.fontSize.lg};
 `;

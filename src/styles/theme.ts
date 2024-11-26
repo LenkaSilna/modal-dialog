@@ -7,6 +7,8 @@ export const theme = {
     text: '#333333',
     textSecondary: '#666666',
     overlay: 'rgba(0, 0, 0, 0.5)',
+    mainHeader: '#f8f9fa',
+    inputFocus: '#4dabf7',
   },
   spacing: {
     xs: '4px',

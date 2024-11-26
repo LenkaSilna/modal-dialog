@@ -5,7 +5,7 @@ import { ButtonProps } from '../../types';
 export const StyledButton = styled.button<Pick<ButtonProps, 'variant'>>`
   padding: ${theme.spacing.sm} ${theme.spacing.md};
   border-radius: ${theme.borderRadius.sm};
-  font-size: 14px;
+  font-size: ${theme.typography.fontSize.sm};
   cursor: pointer;
   border: 1px solid transparent;
   transition: all 0.2s ease-in-out;

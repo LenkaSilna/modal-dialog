@@ -12,6 +12,12 @@ export const ButtonControls = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 12px 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: ${theme.spacing.sm};
+    align-items: center;
+  }
 `;
 
 export const ButtonContainer = styled.div`
@@ -19,6 +25,12 @@ export const ButtonContainer = styled.div`
   gap: ${theme.controls.gap};
   align-items: center;
   margin: 12px 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: ${theme.spacing.sm};
+    align-items: center;
+  }
 `;
 
 export const Input = styled.input`
@@ -31,7 +43,11 @@ export const Input = styled.input`
 
   &:focus {
     outline: none;
-    border-color: #4dabf7;
+    border-color: ${theme.colors.inputFocus};
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
 
@@ -41,10 +57,13 @@ export const Select = styled.select`
   border: 1px solid #dee2e6;
   border-radius: ${theme.input.borderRadius};
   font-size: ${theme.input.fontSize};
-  min-width: 120px;
 
   &:focus {
     outline: none;
-    border-color: #4dabf7;
+    border-color: ${theme.colors.inputFocus};
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;

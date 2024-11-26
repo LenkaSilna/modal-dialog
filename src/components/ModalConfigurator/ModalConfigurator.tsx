@@ -61,74 +61,74 @@ export const ModalConfigurator: React.FC = () => {
     <Container>
       <Content>
         <ConfigSection title="Nastavení hlavičky">
-        <Container>
-          <FormGroup>
-            <CheckboxLabel>
-              <input
-                type="checkbox"
-                checked={config.showIcon}
-                onChange={(e) => updateConfig({ showIcon: e.target.checked })}
-              />
-              <span>Zobrazit ikonu</span>
-            </CheckboxLabel>
-          </FormGroup>
+          <Container>
+            <FormGroup>
+              <CheckboxLabel>
+                <input
+                  type="checkbox"
+                  checked={config.showIcon}
+                  onChange={(e) => updateConfig({ showIcon: e.target.checked })}
+                />
+                <span>Zobrazit ikonu</span>
+              </CheckboxLabel>
+            </FormGroup>
 
-          <FormGroup>
-            <Label>
-              <span>Titulek</span>
-              <Input
-                type="text"
-                value={config.title}
-                onChange={(e) => updateConfig({ title: e.target.value })}
-              />
-            </Label>
-          </FormGroup>
+            <FormGroup>
+              <Label>
+                <span>Titulek</span>
+                <Input
+                  type="text"
+                  value={config.title}
+                  onChange={(e) => updateConfig({ title: e.target.value })}
+                />
+              </Label>
+            </FormGroup>
 
-          <ButtonConfig
-            buttons={config.headerButtons}
-            onAdd={() => addButton('header')}
-            onRemove={(id) => removeButton('header', id)}
-            onChange={(id, value) => {
-              updateConfig({
-                headerButtons: config.headerButtons.map((button) =>
-                  button.id === id ? { ...button, label: value } : button,
-                ),
-              });
-            }}
-            type="header"
-          />
-        </Container>
+            <ButtonConfig
+              buttons={config.headerButtons}
+              onAdd={() => addButton('header')}
+              onRemove={(id) => removeButton('header', id)}
+              onChange={(id, value) => {
+                updateConfig({
+                  headerButtons: config.headerButtons.map((button) =>
+                    button.id === id ? { ...button, label: value } : button,
+                  ),
+                });
+              }}
+              type="header"
+            />
+          </Container>
         </ConfigSection>
 
         <ConfigSection title="Obsah">
           <Container>
-          <FormGroup>
-            <Label>
-              <span>Nadpis obsahu</span>
-              <Input
-                type="text"
-                value={config.content.title}
-                onChange={(e) =>
-                  updateConfig({
-                    content: { ...config.content, title: e.target.value },
-                  })
-                }
-              />
-            </Label>
-          </FormGroup>
-          <FormGroup>
-            <Label>
-              <span>Popis</span>
-              <textarea
-                value={config.content.description}
-                onChange={(e) =>
-                  updateConfig({
-                    content: { ...config.content, description: e.target.value },
-                  })
-                }
-              />
-            </Label>
-          </FormGroup>
+            <FormGroup>
+              <Label>
+                <span>Nadpis obsahu</span>
+                <Input
+                  type="text"
+                  value={config.content.title}
+                  onChange={(e) =>
+                    updateConfig({
+                      content: { ...config.content, title: e.target.value },
+                    })
+                  }
+                />
+              </Label>
+            </FormGroup>
+            <FormGroup>
+              <Label>
+                <span>Popis</span>
+                <textarea
+                  value={config.content.description}
+                  onChange={(e) =>
+                    updateConfig({
+                      content: { ...config.content, description: e.target.value },
+                    })
+                  }
+                />
+              </Label>
+            </FormGroup>
           </Container>
         </ConfigSection>
 

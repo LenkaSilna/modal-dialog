@@ -9,23 +9,19 @@ export const Section = styled.section`
 
 export const Header = styled.div`
   padding: ${theme.spacing.sm} ${theme.spacing.md};
-  background-color: #f8f9fa;
+  background-color: ${theme.colors.mainHeader};
   border-radius: ${theme.borderRadius.sm} ${theme.borderRadius.sm} 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
   user-select: none;
-
-  &:hover {
-    background-color: #f1f3f5;
-  }
 `;
 
 export const Title = styled.h2`
   margin: 0;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: ${theme.typography.fontSize.md};
+  font-weight: ${theme.typography.fontWeight.medium};
 `;
 
 export const Content = styled.div<{ $isOpen: boolean }>`

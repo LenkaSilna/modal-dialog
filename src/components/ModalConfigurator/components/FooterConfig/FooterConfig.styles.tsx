@@ -16,7 +16,7 @@ export const CheckboxGroup = styled.div`
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: ${theme.spacing.sm};
 `;
 
 export const DescriptionInput = styled.input`
@@ -28,6 +28,6 @@ export const DescriptionInput = styled.input`
 
   &:focus {
     outline: none;
-    border-color: #4dabf7;
+    border-color: ${theme.colors.inputFocus};
   }
 `;

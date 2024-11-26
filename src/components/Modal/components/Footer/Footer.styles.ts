@@ -12,5 +12,5 @@ export const StyledFooter = styled.div`
 export const Description = styled.p`
   margin: 0;
   color: ${theme.colors.textSecondary};
-  font-size: 14px;
+  font-size: ${theme.typography.fontSize.sm};
 `;

@@ -4,6 +4,7 @@ import { theme } from '../../../../styles/theme';
 
 export const StyledButtonGroup = styled.div<Pick<ButtonGroupProps, 'align'>>`
   display: flex;
+  flex-wrap: wrap;
   gap: ${theme.spacing.sm};
   justify-content: ${(props) => {
     switch (props.align) {
