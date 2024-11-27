@@ -32,9 +32,4 @@ export const StyledButton = styled.button<Pick<ButtonProps, 'variant'>>`
         background-color: ${theme.colors.border};
       }
     `}
-
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
 `;

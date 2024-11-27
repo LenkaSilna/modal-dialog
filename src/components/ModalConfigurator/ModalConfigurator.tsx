@@ -14,6 +14,7 @@ import {
   Input,
   CheckboxLabel,
   ButtonSection,
+  Wrapper,
 } from './ModalConfigurator.styles';
 
 export const ModalConfigurator: React.FC = () => {
@@ -58,8 +59,16 @@ export const ModalConfigurator: React.FC = () => {
   });
 
   return (
-    <Container>
+    <Wrapper>
       <Content>
+      <ButtonSection>
+          <Button onClick={resetConfig} variant="secondary">
+            Obnovit výchozí nastavení
+          </Button>
+          <Button variant="primary" onClick={open}>
+            Zobrazit modal
+          </Button>
+        </ButtonSection>
         <ConfigSection title="Nastavení hlavičky">
           <Container>
             <FormGroup>
@@ -140,15 +149,6 @@ export const ModalConfigurator: React.FC = () => {
             onRemoveButton={(id) => removeButton('footer', id)}
           />
         </ConfigSection>
-
-        <ButtonSection>
-          <Button onClick={resetConfig} variant="secondary">
-            Obnovit výchozí nastavení
-          </Button>
-          <Button variant="primary" onClick={open}>
-            Zobrazit modal
-          </Button>
-        </ButtonSection>
       </Content>
 
       <Modal isOpen={isOpen} onClose={close} {...createModalProps()}>
@@ -157,6 +157,6 @@ export const ModalConfigurator: React.FC = () => {
           <p>{config.content.description}</p>
         </div>
       </Modal>
-    </Container>
+    </Wrapper>
   );
 };
