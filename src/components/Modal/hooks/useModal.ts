@@ -10,13 +10,13 @@ export const useModal = (initialState = false) => {
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape' && isOpen) {
-        close();
+        setIsOpen(false);
       }
     };
 
     document.addEventListener('keydown', handleEscape);
     return () => document.removeEventListener('keydown', handleEscape);
-  }, [isOpen, close]);
+  }, [isOpen]);
 
   return { isOpen, open, close, toggle };
 };
